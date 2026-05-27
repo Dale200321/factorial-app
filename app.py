@@ -35,7 +35,7 @@ def login_page():
         else:
             st.warning("Please enter username!")
 
-def main():
+def factorial_calculator():
     st.title("Factorial Calculator")
 
     st.write(f"Hello, {st.ssession_state.username}!")
@@ -53,6 +53,14 @@ def main():
     if st.button("Calculate"):
         result = fact(number)
         st.write(f'The factorial of {number} is {result}')
+
+def main():
+     if 'logged_in' not in st.session_state:
+          st.session_state.logged_in = False
+     if 'username' not in st.session_state:
+          st.session_state.username = ''
+     if 'show_greeting' not in st.session_state:
+          st.session_state.show_greeting = False
         
 if __name__ == "__main__":
     main()
