@@ -38,7 +38,7 @@ def login_page():
 def factorial_calculator():
     st.title("Factorial Calculator")
 
-    st.write(f"Hello, {st.ssession_state.username}!")
+    st.write(f"Hello, {st.session_state.username}!")
 
     if st.button("Log out"):
         st.session_state.logged_in = False
@@ -78,7 +78,7 @@ def main():
           greeting_page()
      else:
           login_page()
-        
+
 if __name__ == "__main__":
-    main()
+     main()
 
