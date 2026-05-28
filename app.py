@@ -54,17 +54,6 @@ def factorial_calculator():
         result = fact(number)
         st.write(f'The factorial of {number} is {result}')
 
-def main():
-     if 'logged_in' not in st.session_state:
-          st.session_state.logged_in = False
-     if 'username' not in st.session_state:
-          st.session_state.username = ''
-     if 'show_greeting' not in st.session_state:
-          st.session_state.show_greeting = False
-        
-if __name__ == "__main__":
-    main()
-
 def greeting_page():
     st.title("Hola!")
     st.write(f"Hello {st.session_state.username}")
@@ -74,4 +63,22 @@ if st.button("Return to login"):
     st.session_state.show_greeting = False
     st.session_state.username = " "
     st.rerun()
+
+def main():
+     if 'logged_in' not in st.session_state:
+          st.session_state.logged_in = False
+     if 'username' not in st.session_state:
+          st.session_state.username = ''
+     if 'show_greeting' not in st.session_state:
+          st.session_state.show_greeting = False
+
+     if st.session_state.logged_in:
+          factorial_calculator()
+     elif st.session_state.show_greeting:
+          greeting_page()
+     else:
+          login_page()
+        
+if __name__ == "__main__":
+    main()
 
