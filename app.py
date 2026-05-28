@@ -2,7 +2,7 @@ import streamlit as st
 from factorial import fact
 import os
 
-def load_user():
+def load_users():
      # Đọc danh sách user từ file user.txt
     try:
         if os.path.exists("user.txt"):
