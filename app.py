@@ -17,7 +17,7 @@ def load_user():
         return []
 
 def login_page():
-    st.title("Login"):
+    st.title("Login")
 
     username = st.text_input("Enter username:")
 
