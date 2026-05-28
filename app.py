@@ -43,7 +43,7 @@ def factorial_calculator():
     if st.button("Log out"):
         st.session_state.logged_in = False
         st.session_state.username = " "
-        st. rerun
+        st.rerun
 
     st.divider()
     
